@@ -1,5 +1,18 @@
+ /* 
+ *
+ *  Chat Panel created by Andrew James Dick and Kenny Creanor. 
+ *  
+ *  Designed to be used in conjunction with the Monday Night Gaming TeamSpeak client theme plugin.
+ *
+ *  Theme codebase available at: https://github.com/AndrewJDick/MNG_TStheme;
+ *
+ *  Panel design based on Ethan Schoonover's Solarized theme (http://ethanschoonover.com/solarized). 
+ *
+ */
+
+
 /*
- * TeamSpeak 3 Default Qt StyleSheet
+ * TeamSpeak 3 Monday Night Gaming StyleSheet
  * Special file for ChatLog, loaded in addition to global default.qss stylesheet
  *
  * Copyright (c) TeamSpeak Systems GmbH
@@ -83,114 +96,105 @@
  *  - TextMessage_Time                     :: message time
  *  - TextMessage_Text                     :: message text
  */
+
  
 /* @group Global Elements */
 
-p {
-  padding: 0px;
-  margin: 0px;
-}
+  * {
+    font-family: Courier, Lucida, sans-serif;
+  }
 
-/* @end */
+  p {
+    padding: 0px;
+    margin: 0px;
+  }
+
 
 /* @group Object Link Elements */
+  
+  /* Blue */
+  .TextMessage_ServerLink {
+    color: #268bd2;
+    text-decoration: none;
+  }
 
-.TextMessage_UserLink {
-  color: #0047ab;
-  font-weight: bold;
-  text-decoration: none;
-}
+  /* Green */
+  .TextMessage_UserLink {
+    color: #859900;
+    text-decoration: none;
+  }
 
-/* @external linkcolors in chat tab */
-a[href|="http://"], 
-a[href|="https://"] {
-  text-decoration: underline;
-  color: #3abced;
-}
+  /* Orange */
+  .TextMessage_OfflineLink,
+  .TextMessage_ChannelLink {
+    color: #cb4b16;
+    text-decoration: none;
+  }
 
+  /* Violet */
+  a[href|="http://"], 
+  a[href|="https://"] {
+    text-decoration: underline;
+    color: #6c71c4;
+  }
 
-.TextMessage_OfflineLink,
-.TextMessage_ChannelLink,
-.TextMessage_ServerLink {
-  color: #CD7F32;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-/* @end */
 
 /* @group Colored Message Elements */
 
-.TextMessage_HostName {
-  color: #fefefe;
-  font-weight: bold;
-}
+  /* Base 00 */
+  .TextMessage_Normal,
+  .TextMessage_Welcome,
+  .TextMessage_Connected,
+  .TextMessage_ClientConnected,
+  .TextMessage_ClientJoined,
+  .TextMessage_ClientSwitched,
+  .TextMessage_GroupRevoked,
+  .TextMessage_GroupAssigned,
+  .TextMessage_HostMessage,
+  .TextMessage_TalkPowerAssigned,
+  .TextMessage_TalkPowerRevoked,
+  .TextMessage_TalkPowerRequested {
+    color: #657b83;
+  }
 
-.TextMessage_Welcome,
-.TextMessage_HostMessage,
-.TextMessage_Poke  {
-  color: #32CD32;
-}
+  /* Magenta */
+  .TextMessage_Poke {
+    color: #d33682;
+  }
 
-.TextMessage_Normal,
-.TextMessage_Connected,
-.TextMessage_ClientConnected,
-.TextMessage_ClientJoined {
-  color: #fefefe;
-}
+  /* Red */
+  .TextMessage_Disconnected,
+  .TextMessage_ClientDisconnected,
+  .TextMessage_ClientLeft,
+  .TextMessage_ClientDropped,
+  .TextMessage_ClientKicked,
+  .TextMessage_ClientBanned {
+    color: #dc322f;
+  }
 
-.TextMessage_Disconnected,
-.TextMessage_ClientDisconnected,
-.TextMessage_ClientSwitched,
-.TextMessage_ClientLeft {
-  color: #fefefe;
-}
-
-.TextMessage_ClientDropped,
-.TextMessage_ClientKicked,
-.TextMessage_ClientBanned {
-  color: #C9070A;
-}
-
-.TextMessage_ChannelCreated,
-.TextMessage_ChannelDeleted,
-.TextMessage_ChannelEdited,
-.TextMessage_ChannelMoved,
-.TextMessage_ServerEdited {
-  color: #fefefe;
-}
-
-.TextMessage_GroupAssigned,
-.TextMessage_GroupRevoked,
-.TextMessage_TalkPowerAssigned,
-.TextMessage_TalkPowerRevoked,
-.TextMessage_TalkPowerRequested {
-  color: #fefefe;
-}
-
-/* @end */
+  /* Yellow */
+  .TextMessage_ChannelCreated,
+  .TextMessage_ChannelDeleted,
+  .TextMessage_ChannelEdited,
+  .TextMessage_ChannelMoved,
+  .TextMessage_ServerEdited,
+  .TextMessage_HostName {
+    color: #b58900;
+  }
 
 /* @group Time and History Elements */
 
-.TextMessage_Time {
-    color: #FF7F00;
-	font-weight: normal;
-}
-
-.TextMessage_BeginHistory,
-.TextMessage_EndHistory {
-  color: #707475;
-  font-weight: bold;
-  font-style: italic;
-}
-
-/* @end */
+  /* Base 01 */
+  .TextMessage_Time,
+  .TextMessage_BeginHistory,
+  .TextMessage_EndHistory {
+    color: #586e75;
+  	font-weight: normal;
+  }
 
 /* @group Error Message Elements */
 
-.TextMessage_ServerError {
-  color: #C9070A;
-  font-weight: bold;
-}
-
-/* @end */
+  /* Red */
+  .TextMessage_ServerError {
+    color: #dc322f;
+  }

@@ -10,6 +10,7 @@
 *
 */
 
+
 /*
         Light Blue - Backgrounds  
 */                
@@ -117,7 +118,7 @@ InfoFrame {
 	border: 1px solid #ffae00;
 	border-radius: 8px;
     background: #000;
-	background-image: url('styles/MNG/info_frame.png');
+	background-image: url('/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/styles/MNG/info_frame.png');
 	background-repeat: none;
 	background-position: top right;
 	background-attachment: fixed;
@@ -135,7 +136,7 @@ QTextEdit#ChatTab {
     border: 1px solid #ffae00;
 	border-radius: 8px;
 	background: #020202;
-    background-image: url('styles/MNG/chat_tab.png');
+    background-image: url('/Applications/TeamSpeak 3 Client.app/Contents/SharedSupport/styles/MNG/chat_tab.png');
     background-repeat: none;
     background-position: top right;
     background-attachment: fixed;
